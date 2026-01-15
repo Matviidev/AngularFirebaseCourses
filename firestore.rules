@@ -35,6 +35,8 @@ service cloud.firestore {
 
       match /lessons/{lessonId} {
         allow read: if isKnownUser();
+        allow create, update: if true;
+        allow delete: if isAdmin();
       }
 
    }
