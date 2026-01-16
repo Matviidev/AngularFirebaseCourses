@@ -2,6 +2,7 @@
 
 Demo Angular application built with **Angular 13 + Angular Material** and integrated with **Firebase (Auth, Firestore, Storage, Hosting, Functions)**.  
 This repo is set up for **local development using Firebase Emulators** with optional seed data in `test-data/`.
+[Current deploy](https://fir-course-b595a.web.app/courses/serverless-angular)
 
 ### What’s inside
 
