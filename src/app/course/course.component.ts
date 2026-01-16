@@ -25,10 +25,14 @@ export class CourseComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private coursesService: CoursesService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.course = this.route.snapshot.data['course'];
+
+    if (!this.course) {
+      return;
+    }
 
     this.loading = true;
 
@@ -39,6 +43,10 @@ export class CourseComponent implements OnInit {
   }
 
   loadMore() {
+    if (!this.course) {
+      return;
+    }
+
     this.lastPageLoaded++;
 
     this.loading = true;
